@@ -1,16 +1,16 @@
-package KeyAuth;
-require "./KeyAuth.pl";
+package EpicAuth;
+require "./EpicAuth.pl";
 
-KeyAuth::Api(
+EpicAuth::Api(
     "Application Name",
     "Application Owner ID",
     "Application Secret",
     "1.0"
 );
 
-KeyAuth::ClearConsole();
+EpicAuth::ClearConsole();
 print "\n\n Initializing...\n";
-KeyAuth::Init();
+EpicAuth::Init();
 
 print("
  App data: 
@@ -33,7 +33,7 @@ if ($choice == "1") {
     $password = <STDIN>;
     chomp $password;
     
-    KeyAuth::Login($username, $password);
+    EpicAuth::Login($username, $password);
 
 } elsif ($choice == "2") {
     print "\n Enter your username: ";
@@ -46,7 +46,7 @@ if ($choice == "1") {
     $license = <STDIN>;
     chomp $license;
     
-    KeyAuth::Register($username, $password, $license);
+    EpicAuth::Register($username, $password, $license);
 
 } elsif ($choice == "3") {
     print "\n Enter your username: ";
@@ -56,14 +56,14 @@ if ($choice == "1") {
     $license = <STDIN>;
     chomp $license;
     
-    KeyAuth::Upgrade($username, $license);
+    EpicAuth::Upgrade($username, $license);
 
 } elsif ($choice == "4") {
     print "\n Enter your license: ";
     $license = <STDIN>;
     chomp $license;
     
-    KeyAuth::License($license);
+    EpicAuth::License($license);
 
 } else {
     print("\nNot Valid Option");

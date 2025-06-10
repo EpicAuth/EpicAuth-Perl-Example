@@ -1,4 +1,4 @@
-package KeyAuth;
+package EpicAuth;
 
 require HTTP::Request;
 
@@ -51,7 +51,7 @@ sub Init {
     my $url = "https://keyauth.site/api/1.1/?type=init&name=${name}&ownerid=${ownerid}&ver=${version}";
     $response = Req($url);
 
-    if ($response->decoded_content =~ "KeyAuth_Invalid") {
+    if ($response->decoded_content =~ "EpicAuth_Invalid") {
         print("Error: Application not found");
         exit(0);
     }

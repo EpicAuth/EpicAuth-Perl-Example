@@ -1,4 +1,4 @@
-### **KeyAuth Perl Example**
+### **EpicAuth Perl Example**
 - Created for **Windows** NOT **LINUX**.
 - **NO SUPPORT IS PROVIDED TO THIS EXAMPLE**
 
@@ -22,7 +22,7 @@ state install JSON@4.05
 
 ## Copyright License
 
-KeyAuth is licensed under **Elastic License 2.0**
+EpicAuth is licensed under **Elastic License 2.0**
 
 * You may not provide the software to third parties as a hosted or managed
 service, where the service provides users with access to any substantial set of
@@ -36,4 +36,4 @@ software that is protected by the license key.
 of the licensor in the software. Any use of the licensor’s trademarks is subject
 to applicable law.
 
-Thank you for your compliance, we work hard on the development of KeyAuth and do not appreciate our copyright being infringed.
+Thank you for your compliance, we work hard on the development of EpicAuth and do not appreciate our copyright being infringed.
