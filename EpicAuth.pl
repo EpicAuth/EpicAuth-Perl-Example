@@ -48,7 +48,7 @@ sub Api {
 }
 
 sub Init {
-    my $url = "https://keyauth.site/api/1.1/?type=init&name=${name}&ownerid=${ownerid}&ver=${version}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=init&name=${name}&ownerid=${ownerid}&ver=${version}";
     $response = Req($url);
 
     if ($response->decoded_content =~ "EpicAuth_Invalid") {
@@ -76,7 +76,7 @@ sub Upgrade {
     $Username = $_[0];
     $Key = $_[1];
 
-    my $url = "https://keyauth.site/api/1.1/?type=upgrade&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&key=${Key}&username=${Username}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=upgrade&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&key=${Key}&username=${Username}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -95,7 +95,7 @@ sub Login {
 
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=login&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&username=${Username}&pass=${Password}&hwid=${hwid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=login&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&username=${Username}&pass=${Password}&hwid=${hwid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -114,7 +114,7 @@ sub Register {
 
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=register&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&username=${Username}&pass=${Password}&key=${Key}&hwid=${hwid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=register&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&username=${Username}&pass=${Password}&key=${Key}&hwid=${hwid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -131,7 +131,7 @@ sub License {
 
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=license&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&key=${key}&hwid=${hwid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=license&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&key=${key}&hwid=${hwid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -146,7 +146,7 @@ sub License {
 sub Var {
     $varid = $_[0];
 
-    my $url = "https://keyauth.site/api/1.1/?type=var&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&varid=${varid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=var&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&varid=${varid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -161,7 +161,7 @@ sub Setvar {
     $varid = $_[0];
     $data = $_[1];
 
-    my $url = "https://keyauth.site/api/1.1/?type=setvar&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&var=${varid}&data=${data}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=setvar&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&var=${varid}&data=${data}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -175,7 +175,7 @@ sub Setvar {
 sub Getvar {
     $varid = $_[0];
 
-    my $url = "https://keyauth.site/api/1.1/?type=getvar&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&var=${varid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=getvar&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&var=${varid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -189,7 +189,7 @@ sub Getvar {
 sub FetchOnline {
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=fetchOnline&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=fetchOnline&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -203,7 +203,7 @@ sub FetchOnline {
 sub Check {
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=check&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&hwid=${hwid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=check&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&hwid=${hwid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -217,7 +217,7 @@ sub Check {
 sub CheckBlacklist {
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=check&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&hwid=${hwid}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=check&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&hwid=${hwid}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -232,7 +232,7 @@ sub Webhook {
     $webid = $_[0];
     $params = $_[1];
 
-    my $url = "https://keyauth.site/api/1.1/?type=webhook&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&webid=${webid}&params=${params}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=webhook&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&webid=${webid}&params=${params}";
     $response = Req($url);
     my $json = decode_json($response->content);
 
@@ -248,7 +248,7 @@ sub Log {
     $PcUser = Win32::LoginName || "UNKNOWN";
     $hwid = GetHwid();
 
-    my $url = "https://keyauth.site/api/1.1/?type=log&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&hwid=${hwid}&pcuser=${PcUser}&message=${message}";
+    my $url = "https://EpicAuth.cc/api/1.1/?type=log&name=${name}&ownerid=${ownerid}&sessionid=${sessionid}&hwid=${hwid}&pcuser=${PcUser}&message=${message}";
     $response = Req($url);
 }
 
