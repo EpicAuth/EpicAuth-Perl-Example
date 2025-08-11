@@ -101,6 +101,9 @@ sub Login {
 
     if ($json->{'success'}) {
         Load_UserData(encode_json($json->{'info'}));
+    } elsif ($json->{'message'} == "invalidver") {
+        print("Error: Invalid version");
+        exit(0);
     } else {
         print("\nError: " . $json->{'message'});
         exit(0);
@@ -120,6 +123,9 @@ sub Register {
 
     if ($json->{'success'}) {
         Load_UserData(encode_json($json->{'info'}));
+    } elsif ($json->{'message'} == "invalidver") {
+        print("Error: Invalid version");
+        exit(0);
     } else {
         print("\nError: " . $json->{'message'});
         exit(0);
@@ -137,6 +143,9 @@ sub License {
 
     if ($json->{'success'}) {
         Load_UserData(encode_json($json->{'info'}));
+    } elsif ($json->{'message'} == "invalidver") {
+        print("Error: Invalid version");
+        exit(0);
     } else {
         print("\nError: " . $json->{'message'});
         exit(0);
